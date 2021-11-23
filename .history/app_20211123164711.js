@@ -6,7 +6,7 @@ playerLivesCount.textContent = playerLives;
 
 //Generate the data
 
-const getData = [
+const getData = () => [
   { imgSrc: "./images/Metallica.jpeg", name: "Metallica" },
   { imgSrc: "./images/IronMaiden.jpeg", name: "Iron Maiden" },
   { imgSrc: "./images/Motörhead.jpeg", name: "Motörhead" },
@@ -26,7 +26,7 @@ const getData = [
 ];
 
 const randomize = () => {
-  const cardData = getData;
+  const cardData = getData();
 
   cardData.sort(() => Math.random() - 0.5);
   return cardData;
@@ -36,7 +36,7 @@ const cardGenerator = () => {
   const cardData = randomize();
 
   cardData.forEach((item) => {
-    console.log(item);
+    // console.log(item);
     const card = document.createElement("div");
     const photo = document.createElement("img");
     const interior = document.createElement("div");

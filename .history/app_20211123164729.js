@@ -36,7 +36,7 @@ const cardGenerator = () => {
   const cardData = randomize();
 
   cardData.forEach((item) => {
-    console.log(item);
+    // console.log(item);
     const card = document.createElement("div");
     const photo = document.createElement("img");
     const interior = document.createElement("div");
