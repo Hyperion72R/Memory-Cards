@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  height: 100vh;
-}
-
 section {
   display: grid;
   grid-template-columns: repeat(4, 8rem);
