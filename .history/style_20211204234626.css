@@ -22,7 +22,7 @@ section {
   grid-template-columns: repeat(4, 8rem);
   grid-template-rows: repeat(4, 8rem);
   grid-gap: 2rem;
-  perspective: 800px;
+  perspective: 2000px;
 }
 
 .photo,
@@ -36,10 +36,8 @@ section {
   border: 5px solid rgb(0, 0, 0);
   position: relative;
   transform-style: preserve-3d;
-  transition: all 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  /* transform: rotateY(180deg); */
-  /* transform: rotateY(180deg) scale(-1, 1); */
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+  transition: all 2s ease;
+  transform: rotate(180deg);
 }
 
 h1 {

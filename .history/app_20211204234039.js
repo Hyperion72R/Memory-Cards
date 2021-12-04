@@ -57,3 +57,15 @@ const cardGenerator = () => {
 };
 
 cardGenerator();
+
+function printElt(element, index, array) {
+  print("[" + index + "] jest " + element);
+}
+
+let x = [2, 5, 9].forEach(printElt);
+// Wydrukuje:
+// [0] jest 2
+// [1] jest 5
+// [2] jest 9
+
+console.log(x);
