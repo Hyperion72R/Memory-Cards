@@ -51,10 +51,6 @@ h1 {
 .interior {
   background: white;
   backface-visibility: hidden;
-}
-
-/* Mirror photo */
-.photo {
   transform: scaleX(-1);
 }
 

@@ -53,11 +53,6 @@ h1 {
   backface-visibility: hidden;
 }
 
-/* Mirror photo */
-.photo {
-  transform: scaleX(-1);
-}
-
 .toggleCard {
   transform: rotateY(180deg);
   /* transform: scaleX(-1); */

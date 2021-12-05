@@ -53,7 +53,6 @@ h1 {
   backface-visibility: hidden;
 }
 
-/* Mirror photo */
 .photo {
   transform: scaleX(-1);
 }

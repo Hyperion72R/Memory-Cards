@@ -55,7 +55,7 @@ const cardGenerator = () => {
     card.appendChild(interior);
 
     card.addEventListener("click", (e) => {
-      card.classList.toggle("toggleCard");
+      card.classList.toogle("toggleCard");
     });
   });
 };
