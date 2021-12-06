@@ -24,6 +24,7 @@ const getData = [
   { imgSrc: "./images/GunsNRoses.jpg", name: "Guns N’ Roses" },
   { imgSrc: "./images/DeepPurple.jpg", name: "Deep Purple" },
 ];
+
 const randomize = () => {
   const cardData = getData;
 
@@ -48,7 +49,7 @@ const cardGenerator = () => {
 
     //Attach the info to the cards
     photo.src = item.imgSrc;
-    photo.alt = item.name;
+    photo.alt = item[1].name;
 
     cards;
 

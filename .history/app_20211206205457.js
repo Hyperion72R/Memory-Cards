@@ -24,6 +24,7 @@ const getData = [
   { imgSrc: "./images/GunsNRoses.jpg", name: "Guns N’ Roses" },
   { imgSrc: "./images/DeepPurple.jpg", name: "Deep Purple" },
 ];
+
 const randomize = () => {
   const cardData = getData;
 
@@ -34,9 +35,7 @@ const randomize = () => {
 const cardGenerator = () => {
   const cardData = randomize();
 
-  const cards = document.querySelectorAll(".card");
-
-  cardData.forEach((item, index) => {
+  cardData.forEach((item) => {
     console.log(item);
     const card = document.createElement("div");
     const photo = document.createElement("img");
@@ -50,8 +49,6 @@ const cardGenerator = () => {
     photo.src = item.imgSrc;
     photo.alt = item.name;
 
-    cards;
-
     //Attach the cards to the section
     section.appendChild(card);
     card.appendChild(photo);
@@ -59,7 +56,7 @@ const cardGenerator = () => {
 
     card.addEventListener("click", (e) => {
       card.classList.toggle("toggleCard");
-      checkCards(e);
+      checkCards();
     });
   });
 };

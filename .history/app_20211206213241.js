@@ -7,25 +7,28 @@ playerLivesCount.textContent = playerLives;
 //Generate the data
 
 const getData = [
-  { imgSrc: "./images/Metallica.jpg", name: "Metallica" },
-  { imgSrc: "./images/IronMaiden.jpg", name: "Iron Maiden" },
-  { imgSrc: "./images/Motörhead.jpg", name: "Motörhead" },
-  { imgSrc: "./images/ZZTop.jpg", name: "ZZTop" },
-  { imgSrc: "./images/ACDC.jpg", name: "AC/DC" },
-  { imgSrc: "./images/BlackSabbath.jpg", name: "Black Sabbath" },
-  { imgSrc: "./images/GunsNRoses.jpg", name: "Guns N’ Roses" },
-  { imgSrc: "./images/DeepPurple.jpg", name: "Deep Purple" },
-  { imgSrc: "./images/Metallica.jpg", name: "Metallica" },
-  { imgSrc: "./images/IronMaiden.jpg", name: "Iron Maiden" },
-  { imgSrc: "./images/Motörhead.jpg", name: "Motörhead" },
-  { imgSrc: "./images/ZZTop.jpg", name: "ZZTop" },
-  { imgSrc: "./images/ACDC.jpg", name: "AC/DC" },
-  { imgSrc: "./images/BlackSabbath.jpg", name: "Black Sabbath" },
-  { imgSrc: "./images/GunsNRoses.jpg", name: "Guns N’ Roses" },
-  { imgSrc: "./images/DeepPurple.jpg", name: "Deep Purple" },
+  [
+    { imgSrc: "./images/Metallica.jpg", name: "Metallica" },
+    { imgSrc: "./images/IronMaiden.jpg", name: "Iron Maiden" },
+    { imgSrc: "./images/Motörhead.jpg", name: "Motörhead" },
+    { imgSrc: "./images/ZZTop.jpg", name: "ZZTop" },
+    { imgSrc: "./images/ACDC.jpg", name: "AC/DC" },
+    { imgSrc: "./images/BlackSabbath.jpg", name: "Black Sabbath" },
+    { imgSrc: "./images/GunsNRoses.jpg", name: "Guns N’ Roses" },
+    { imgSrc: "./images/DeepPurple.jpg", name: "Deep Purple" },
+    { imgSrc: "./images/Metallica.jpg", name: "Metallica" },
+    { imgSrc: "./images/IronMaiden.jpg", name: "Iron Maiden" },
+    { imgSrc: "./images/Motörhead.jpg", name: "Motörhead" },
+    { imgSrc: "./images/ZZTop.jpg", name: "ZZTop" },
+    { imgSrc: "./images/ACDC.jpg", name: "AC/DC" },
+    { imgSrc: "./images/BlackSabbath.jpg", name: "Black Sabbath" },
+    { imgSrc: "./images/GunsNRoses.jpg", name: "Guns N’ Roses" },
+    { imgSrc: "./images/DeepPurple.jpg", name: "Deep Purple" },
+  ],
 ];
+
 const randomize = () => {
-  const cardData = getData;
+  const cardData = getData[0];
 
   cardData.sort(() => Math.random() - 0.5);
   return cardData;
