@@ -34,9 +34,9 @@ const randomize = () => {
 const cardGenerator = () => {
   const cardData = randomize();
 
-  // const cards = document.querySelectorAll(".card");
+  const cards = document.querySelectorAll(".card");
 
-  cardData.forEach((item) => {
+  cardData.forEach((item, index) => {
     console.log(item);
     const card = document.createElement("div");
     const photo = document.createElement("img");
@@ -49,7 +49,8 @@ const cardGenerator = () => {
     //Attach the info to the cards
     photo.src = item.imgSrc;
     photo.alt = item.name;
-    card.setAttribute("name", item.name);
+
+    cards[index].setAttribute("name", item.name);
 
     //Attach the cards to the section
     section.appendChild(card);

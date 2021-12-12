@@ -49,7 +49,7 @@ const cardGenerator = () => {
     //Attach the info to the cards
     photo.src = item.imgSrc;
     photo.alt = item.name;
-    card.setAttribute("name", item.name);
+    // card.setAttribute("name", item.name);
 
     //Attach the cards to the section
     section.appendChild(card);

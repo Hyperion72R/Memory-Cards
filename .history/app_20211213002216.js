@@ -36,7 +36,7 @@ const cardGenerator = () => {
 
   // const cards = document.querySelectorAll(".card");
 
-  cardData.forEach((item) => {
+  cardData.forEach((item, index) => {
     console.log(item);
     const card = document.createElement("div");
     const photo = document.createElement("img");
