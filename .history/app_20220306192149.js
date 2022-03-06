@@ -99,7 +99,7 @@ const checkCards = (e) => {
 // Restart
 
 const restart = () => {
-  let cardData = randomize();
+  let cardDate = randomize();
   let photos = document.querySelectorAll(".photo");
   let cards = document.querySelectorAll(".card");
 

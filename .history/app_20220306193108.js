@@ -87,11 +87,11 @@ const checkCards = (e) => {
         card.classList.remove("flipped");
         setTimeout(() => card.classList.remove("toggleCard"), 1000);
       });
-      playerLives--;
-      playerLivesCount.textContent = playerLives;
-      if (playerLives === 0) {
-        restart();
-      }
+      // playerLives--;
+      // playerLivesCount.textContent = playerLives;
+      // if (playerLives === 0) {
+      //   restart();
+      // }
     }
   }
 };

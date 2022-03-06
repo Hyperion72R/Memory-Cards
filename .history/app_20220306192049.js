@@ -89,9 +89,6 @@ const checkCards = (e) => {
       });
       playerLives--;
       playerLivesCount.textContent = playerLives;
-      if (playerLives === 0) {
-        restart();
-      }
     }
   }
 };
@@ -99,7 +96,7 @@ const checkCards = (e) => {
 // Restart
 
 const restart = () => {
-  let cardData = randomize();
+  let cardDate = randomize();
   let photos = document.querySelectorAll(".photo");
   let cards = document.querySelectorAll(".card");
 

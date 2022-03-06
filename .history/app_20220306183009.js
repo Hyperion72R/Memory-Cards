@@ -1,6 +1,6 @@
 const section = document.querySelector("section");
 const playerLivesCount = document.querySelector("span");
-let playerLives = 6;
+const playerLives = 6;
 
 playerLivesCount.textContent = playerLives;
 
@@ -71,41 +71,25 @@ const checkCards = (e) => {
   console.log(flippedCards);
   //Logic
 
-  if (flippedCards.length === 2) {
-    if (
-      flippedCards[0].getAttribute("name") ===
-      flippedCards[1].getAttribute("name")
-    ) {
-      console.log("match");
-      flippedCards.forEach((card) => {
-        card.classList.remove("flipped");
-        card.style.pointerEvents = "none";
-      });
-    } else {
-      console.log("wrong");
-      flippedCards.forEach((card) => {
-        card.classList.remove("flipped");
-        setTimeout(() => card.classList.remove("toggleCard"), 1000);
-      });
-      playerLives--;
-      playerLivesCount.textContent = playerLives;
-      if (playerLives === 0) {
-        restart();
+  for (i = 2; i <= 16; i += 2) {
+    let i2 = i - 2;
+
+    for (y = 1; y <= 16; y++) {
+      y3 = y - 1;
+      y4 = y;
+
+      if (flippedCards.length === i2) {
+        if (
+          flippedCards[y3].getAttribute("name") ===
+          flippedCards[y4].getAttribute("name")
+        ) {
+          console.log("match");
+        } else {
+          console.log("wrong");
+        }
       }
     }
   }
-};
-
-// Restart
-
-const restart = () => {
-  let cardData = randomize();
-  let photos = document.querySelectorAll(".photo");
-  let cards = document.querySelectorAll(".card");
-
-  cardData.forEach((item, index) => {
-    cards[index].classList.remove("toggleCard");
-  });
 };
 
 cardGenerator();
