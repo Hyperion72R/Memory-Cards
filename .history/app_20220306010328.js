@@ -7,26 +7,23 @@ playerLivesCount.textContent = playerLives;
 //Generate the data
 
 const getData = [
-  [
-    { imgSrc: "./images/Metallica.jpg", name: "Metallica" },
-    { imgSrc: "./images/IronMaiden.jpg", name: "Iron Maiden" },
-    { imgSrc: "./images/Motörhead.jpg", name: "Motörhead" },
-    { imgSrc: "./images/ZZTop.jpg", name: "ZZTop" },
-    { imgSrc: "./images/ACDC.jpg", name: "AC/DC" },
-    { imgSrc: "./images/BlackSabbath.jpg", name: "Black Sabbath" },
-    { imgSrc: "./images/GunsNRoses.jpg", name: "Guns N’ Roses" },
-    { imgSrc: "./images/DeepPurple.jpg", name: "Deep Purple" },
-    { imgSrc: "./images/Metallica.jpg", name: "Metallica" },
-    { imgSrc: "./images/IronMaiden.jpg", name: "Iron Maiden" },
-    { imgSrc: "./images/Motörhead.jpg", name: "Motörhead" },
-    { imgSrc: "./images/ZZTop.jpg", name: "ZZTop" },
-    { imgSrc: "./images/ACDC.jpg", name: "AC/DC" },
-    { imgSrc: "./images/BlackSabbath.jpg", name: "Black Sabbath" },
-    { imgSrc: "./images/GunsNRoses.jpg", name: "Guns N’ Roses" },
-    { imgSrc: "./images/DeepPurple.jpg", name: "Deep Purple" },
-  ],
+  { imgSrc: "./images/Metallica.jpg", name: "Metallica" },
+  { imgSrc: "./images/IronMaiden.jpg", name: "Iron Maiden" },
+  { imgSrc: "./images/Motörhead.jpg", name: "Motörhead" },
+  { imgSrc: "./images/ZZTop.jpg", name: "ZZTop" },
+  { imgSrc: "./images/ACDC.jpg", name: "AC/DC" },
+  { imgSrc: "./images/BlackSabbath.jpg", name: "Black Sabbath" },
+  { imgSrc: "./images/GunsNRoses.jpg", name: "Guns N’ Roses" },
+  { imgSrc: "./images/DeepPurple.jpg", name: "Deep Purple" },
+  { imgSrc: "./images/Metallica.jpg", name: "Metallica" },
+  { imgSrc: "./images/IronMaiden.jpg", name: "Iron Maiden" },
+  { imgSrc: "./images/Motörhead.jpg", name: "Motörhead" },
+  { imgSrc: "./images/ZZTop.jpg", name: "ZZTop" },
+  { imgSrc: "./images/ACDC.jpg", name: "AC/DC" },
+  { imgSrc: "./images/BlackSabbath.jpg", name: "Black Sabbath" },
+  { imgSrc: "./images/GunsNRoses.jpg", name: "Guns N’ Roses" },
+  { imgSrc: "./images/DeepPurple.jpg", name: "Deep Purple" },
 ];
-
 const randomize = () => {
   const cardData = getData;
 
@@ -37,9 +34,9 @@ const randomize = () => {
 const cardGenerator = () => {
   const cardData = randomize();
 
-  const cards = document.querySelectorAll(".card");
+  // const cards = document.querySelectorAll(".card");
 
-  cardData.forEach((item, index) => {
+  cardData.forEach((item) => {
     console.log(item);
     const card = document.createElement("div");
     const photo = document.createElement("img");
@@ -52,8 +49,7 @@ const cardGenerator = () => {
     //Attach the info to the cards
     photo.src = item.imgSrc;
     photo.alt = item.name;
-
-    cards;
+    card.setAttribute("name", item.name);
 
     //Attach the cards to the section
     section.appendChild(card);
@@ -70,6 +66,8 @@ const cardGenerator = () => {
 const checkCards = (e) => {
   const clickedCard = e.target;
   console.log(clickedCard);
-};
+  clickedCard.classList.add("flipped")
 
 cardGenerator();
+
+
