@@ -107,12 +107,11 @@ const restart = () => {
   cardData.forEach((item, index) => {
     cards[index].classList.remove("toggleCard");
     //Radnomize
-    cards[index].style.pointerEvents = "all";
-    photos[index].src = item.imgSrc;
-    cards[index].setAttribute("name", item.name);
+    // cards[index].style.pointerEvents = "all";
   });
   playerLives = 6;
   playerLivesCount.textContent = playerLives;
+  cards.style.pointerEvents = "all";
 };
 
 cardGenerator();
