@@ -68,7 +68,6 @@ const checkCards = (e) => {
   console.log(clickedCard);
   clickedCard.classList.add("flipped");
   const flippedCards = document.querySelectorAll(".flipped");
-  const toggleCard = document.querySelectorAll(".toggleCard");
   console.log(flippedCards);
   //Logic
 
@@ -91,19 +90,15 @@ const checkCards = (e) => {
       playerLives--;
       playerLivesCount.textContent = playerLives;
       if (playerLives === 0) {
-        restart("💣 try again!");
+        restart();
       }
     }
-  }
-  //check if we won
-  if (toggleCard.length === 16) {
-    restart("😎you won!");
   }
 };
 
 // Restart
 
-const restart = (text) => {
+const restart = () => {
   let cardData = randomize();
   let photos = document.querySelectorAll(".photo");
   let cards = document.querySelectorAll(".card");
@@ -122,7 +117,6 @@ const restart = (text) => {
   });
   playerLives = 6;
   playerLivesCount.textContent = playerLives;
-  setTimeout(() => window.alert(text), 100);
 };
 
 cardGenerator();
